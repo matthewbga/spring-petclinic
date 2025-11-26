@@ -451,4 +451,12 @@
       </build>
     </profile>
   </profiles>
+  <distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>mt-frontend-ep-mbi-libs-snapshot-snapshots</name>
+        <url>https://trialuud26x.jfrog.io/artifactory/mbi-libs-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>

@@ -1,0 +1,10 @@
+# Dockerfile.run
+FROM openjdk:26-ea-oraclelinux8
+WORKDIR /app
+
+# Copy the JAR produced in the build image
+COPY --from=petclinic-builder /workspace/target/*.jar app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+
