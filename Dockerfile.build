@@ -1,0 +1,12 @@
+# Dockerfile.build
+FROM openjdk:26-ea-oraclelinux8 AS build
+WORKDIR /workspace
+
+# Copy Maven wrapper + pom first to enable dependency caching
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw -q -B dependency:resolve
+
+# Copy source and compile
+COPY src ./src
+RUN ./mvnw -q -B package -DskipTests
