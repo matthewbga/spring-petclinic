@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  # This is required for requesting the OIDC token
+  id-token: write
+  # This is required for actions/checkout
+  contents: read
+
 jobs:
   build:
 
@@ -39,13 +45,6 @@ jobs:
         env:
           JF_URL: ${{ vars.JF_URL }}
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-        with:
-          oidc-provider-name: matthewbga/spring-petclinic@github
-
-      - name: Run JFrog CLI
-        run: |
-          # Ping the server
-          jf rt ping
 
       - name: Build Tag and push Docker Image
         env:
