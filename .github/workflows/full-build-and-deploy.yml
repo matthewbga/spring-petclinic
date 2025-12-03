@@ -1,4 +1,4 @@
-name: Build Image
+name: Full Build and Deploy
 
 on:
   push:
