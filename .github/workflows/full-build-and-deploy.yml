@@ -31,8 +31,8 @@ jobs:
       - name: Build builder image
         run: docker build -f Dockerfile.build -t petclinic-builder .
 
-      # - name: Build runtime image
-      #   run: docker build -f Dockerfile.run -t ${{ secrets.DOCKER_REGISTRY_URL }}/${{ secrets.DOCKER_REPO_PATH }}:${{ github.sha }} .
+      - name: Build runtime image
+        run: docker build -f Dockerfile.run -t ${{ secrets.DOCKER_REGISTRY_URL }}/${{ secrets.DOCKER_REPO_PATH }}:${{ github.sha }} .
 
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v4
