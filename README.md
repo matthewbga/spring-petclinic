@@ -1,3 +1,15 @@
+# Running it
+This may be downloaded from the Artifactory repository then run with a command line like the following.
+```bash
+docker run -i -t -p 9000:8080 <image sha>
+```
+
+After this, open a browser and navigate to `localhost:9000`.
+
+Thank you!
+
+
+
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic) [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=7517918)
