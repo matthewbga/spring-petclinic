@@ -7,7 +7,7 @@ docker run -i -t -p 9000:8080 <image sha>
 After this, open a browser and navigate to `localhost:9000`.
 
 Thank you!
-
+~Matthew Brown
 
 
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)
